@@ -1,15 +1,15 @@
-import { Stack } from '@mui/material'
 import React from 'react'
+import { Stack } from '@mui/material'
 
-const Comunicados = () => {
+const Archivos = () => {
   return (
     <Stack
     alignItems="center"
     justifyContent="center"
     >
-        Comunicados
+        proveedores
     </Stack>
   )
 }
 
-export default Comunicados
+export default Archivos

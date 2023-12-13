@@ -1,15 +1,16 @@
 import React from 'react'
 import { Stack } from '@mui/material'
 
-const Archivos = () => {
+
+const Reglamento = () => {
   return (
     <Stack
     alignItems="center"
     justifyContent="center"
     >
-        Archivos
+       reglamento
     </Stack>
   )
 }
 
-export default Archivos
+export default Reglamento

@@ -1,20 +1,24 @@
-import Comunicados from "./Components/Comunicados"
-import MiCuenta from "./Components/MiCuenta"
-import Archivos from "./Components/Archivos"
-import Dashboard from "./Components/Dashboard"
-import { Route, Routes } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
+import NavBar from "./Components/NavBar"
+import SectionsContainer from "./Components/SectionsContainer"
+import Notificaciones from "./Components/Notificaciones"
+import Reglamento from "./Components/Reglamento"
+import Proveedores from "./Components/Proveedores"
+import Expensas from "./Components/Expensas"
 
 function App() {
 
 
   return (
     <>
-      <Dashboard/>
+      <NavBar/>
+      <SectionsContainer/>
       <Routes>
-        <Route path="/" element={<Comunicados/>}/>
-        <Route path="/archivos" element={<Archivos/>}/>
-        <Route path="/miCuenta" element={<MiCuenta/>}/>
-
+        <Route path="/" element={<Expensas/>} />
+        <Route path="/notificaciones" element={<Notificaciones/>}/>
+        <Route path="reglamentos" element={<Reglamento/>}/>
+        <Route path="/proveedores" element={<Proveedores/>}/>
+        <Route path="/expensas" element={<Expensas/>}/>
       </Routes>
     </>
   )
