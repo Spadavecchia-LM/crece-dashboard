@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import  Avatar  from '@mui/material/Avatar';
+import { GlobalContext } from '../Context/Context';
+import { Link } from 'react-router-dom';
 
 export default function UserSettings() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -14,6 +16,9 @@ export default function UserSettings() {
     setAnchorEl(null);
   };
 
+  const {state} = React.useContext(GlobalContext)
+
+
   return (
     <div>
       <Button
@@ -23,7 +28,7 @@ export default function UserSettings() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <Avatar sx={{ bgcolor: "pink" }}>N</Avatar>
+        <Avatar sx={{ bgcolor: "pink" }}>{Object.keys(state.user).length === 0 ? "" : state.user.nombre.substring(0,1)}</Avatar>
       </Button>
       <Menu
         id="basic-menu"
@@ -34,9 +39,8 @@ export default function UserSettings() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}><Link to={"/micuenta"}>Mi Cuenta</Link></MenuItem>
+        <MenuItem onClick={handleClose}>Cerrar Sesión</MenuItem>
       </Menu>
     </div>
   );

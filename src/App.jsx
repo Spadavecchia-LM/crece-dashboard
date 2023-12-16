@@ -5,6 +5,7 @@ import Notificaciones from "./Components/Notificaciones"
 import Reglamento from "./Components/Reglamento"
 import Proveedores from "./Components/Proveedores"
 import Expensas from "./Components/Expensas"
+import MiCuenta from "./Components/pages/MiCuenta"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="reglamentos" element={<Reglamento/>}/>
         <Route path="/proveedores" element={<Proveedores/>}/>
         <Route path="/expensas" element={<Expensas/>}/>
+        <Route path="/micuenta" element={<MiCuenta/>}/>
       </Routes>
     </>
   )
